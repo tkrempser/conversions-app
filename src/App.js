@@ -10,7 +10,7 @@ const API_ENDPOINT = "https://conversions.krempser.com.br";
 
 const App = () => {
   const [lastConversions, setLastConversions] = useState([]);
-  const [refresh, setRefresh] = useState([false]);
+  const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
     fetch(`${API_ENDPOINT}/conversions.json`)
