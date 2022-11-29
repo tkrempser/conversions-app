@@ -23,4 +23,4 @@ npm run deploy
 ```
 
 ## API endpoint:
-This project uses the API located on this endpoint: https://conversions.krempser.com.br/. The source code of this backend is available in this repository: https://github.com/tkrempser/conversions.
+This project uses the API located on this endpoint: https://conversions.krempser.com.br/. The source code of this backend is available in this repository: https://github.com/tkrempser/conversions/.
