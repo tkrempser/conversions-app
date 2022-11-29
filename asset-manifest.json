@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/conversions-app/static/css/main.c2cab247.css",
-    "main.js": "/conversions-app/static/js/main.0dffc66e.js",
+    "main.js": "/conversions-app/static/js/main.ea6af65a.js",
     "static/media/logo.svg": "/conversions-app/static/media/logo.194bce1d475fc96cf12f14d0b7a57470.svg",
     "index.html": "/conversions-app/index.html",
     "main.c2cab247.css.map": "/conversions-app/static/css/main.c2cab247.css.map",
-    "main.0dffc66e.js.map": "/conversions-app/static/js/main.0dffc66e.js.map"
+    "main.ea6af65a.js.map": "/conversions-app/static/js/main.ea6af65a.js.map"
   },
   "entrypoints": [
     "static/css/main.c2cab247.css",
-    "static/js/main.0dffc66e.js"
+    "static/js/main.ea6af65a.js"
   ]
 }
