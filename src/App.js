@@ -26,7 +26,9 @@ const App = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(conversionData),
     })
-      .then(() => {
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
         setRefresh([!refresh]);
       });
   };
