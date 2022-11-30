@@ -10,7 +10,6 @@ const API_ENDPOINT = "https://conversions.krempser.com.br";
 
 const App = () => {
   const [lastConversions, setLastConversions] = useState([]);
-  const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
     fetch(`${API_ENDPOINT}/conversions.json`)
@@ -18,9 +17,9 @@ const App = () => {
       .then((data) => {
         setLastConversions(data);
       });
-  }, [refresh]);
+  }, []);
 
-  const onConvertHandler = (conversionData) => {
+  const convertHandler = (conversionData) => {
     fetch(`${API_ENDPOINT}/conversions.json`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -28,8 +27,9 @@ const App = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setRefresh([!refresh]);
+        setLastConversions((prevState) => {
+          return [...prevState, data];
+        });
       });
   };
 
@@ -53,7 +53,7 @@ const App = () => {
         <Row className="mt-1">
           <Col className="pt-1">
             <h3 className="mb-3">New Conversion</h3>
-            <NewConversionForm onConvert={onConvertHandler} />
+            <NewConversionForm onConvert={convertHandler} />
           </Col>
         </Row>
         <Row className="mt-1">
